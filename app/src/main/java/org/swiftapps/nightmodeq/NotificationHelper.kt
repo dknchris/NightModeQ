@@ -34,7 +34,7 @@ class NotificationHelper(private val context: Context) {
         return Notification.Builder(context, channelId)
             .setSmallIcon(R.drawable.ic_stat_dark_theme)
             .setContentIntent(clickIntent)
-            .setContentTitle("Quick tile for OnePlus Tones")
+            .setContentTitle(context.getString(R.string.app_name))
             .setContentText("Service running")
             .setOngoing(true)
             .setOnlyAlertOnce(true)
