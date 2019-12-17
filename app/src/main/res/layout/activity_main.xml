@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16.0dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@android:style/TextAppearance.Material.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="This app uses uimode shell implementation on Android Q to set the Night mode parameter to [yes/no/auto]"
+            android:textSize="14.0sp" />
+
+        <TextView
+            style="@android:style/TextAppearance.Material.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dp"
+            android:text="Set night mode (Root)"
+            android:textSize="16.0sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="> cmd uimode night [yes|no|auto]"
+            android:textColor="?android:textColorSecondary" />
+
+        <RadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="16.0dp"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/rb_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="16.0dp"
+                android:text="No" />
+
+            <RadioButton
+                android:id="@+id/rb_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="16.0dp"
+                android:text="Auto" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.2dp"
+            android:layout_marginTop="16.0dp"
+            android:alpha="0.25"
+            android:background="?android:textColorSecondary" />
+
+        <TextView
+            style="@android:style/TextAppearance.Material.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dp"
+            android:text="Add quicksettings tile to toggle night mode"
+            android:textSize="16.0sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="1. Disable battery optimizations for this app first"
+            android:textColor="?android:textColorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set battery optimization setting to 'Don't optimize'. You may need to remove other battery optimizations if the service gets killed often."
+            android:textColor="?android:textColorSecondary" />
+
+        <Button
+            android:id="@+id/btn_disable_battery_opt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dp"
+            android:text="Disable battery optimizations" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="2. Run foreground service (Optional)"
+            android:textColor="?android:textColorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="If the tile doesn't work, run TileService as foreground with a persistent notification. You can hide the notification if needed."
+            android:textColor="?android:textColorSecondary" />
+
+        <Button
+            android:id="@+id/btn_toggle_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dp"
+            android:text="Trigger foreground service" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="3. Add the tile 'Dark theme' to your quick settings panel to toggle light/dark theme manually. Done!"
+            android:textColor="?android:textColorPrimary" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.2dp"
+            android:layout_marginTop="20.0dp"
+            android:alpha="0.25"
+            android:background="?android:textColorSecondary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16.0dp"
+            android:alpha="0.6"
+            android:autoLink="web"
+            android:gravity="center"
+            android:text="Source code on Github:\nhttps://github.com/dknchris/NightModeQ"
+            android:textSize="14.0sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
